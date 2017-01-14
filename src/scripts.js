@@ -23,6 +23,7 @@ secondNameVal.subscribe((value) => {
 
 Rx.Observable.fromEvent(firstName, 'keyup')
     .pluck('target', 'value')
+    .filter((item) => item !== 'a')
     .subscribe (firstNameChange, errorFn);
 
 Rx.Observable.fromEvent(secondName, 'keyup')
