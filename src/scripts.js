@@ -7,12 +7,7 @@ const fullName = document.querySelector('#full-name');
 let firstNameVal = new Rx.BehaviorSubject('');
 let secondNameVal = new Rx.BehaviorSubject('');
 
-const changeNameFn = (subject) => {
-    return (value) => {
-        subject.next(value);
-    }
-};
-
+const changeNameFn = (subject) => (value) => subject.next(value);
 const errorFn = (err) => console.error(err);
 
 const firstNameChange = changeNameFn(firstNameVal);
@@ -25,7 +20,6 @@ firstNameVal.subscribe((value) => {
 secondNameVal.subscribe((value) => {
     fullName.innerHTML = `${firstNameVal.value} ${value}`;
 });
-
 
 Rx.Observable.fromEvent(firstName, 'keyup')
     .pluck('target', 'value')
