@@ -1,0 +1,29 @@
+html, body {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial sans-serif;
+    padding: 30px;
+}
+
+
+.form-row {
+    display: flex;
+    width: 50%;
+    margin-bottom: 10px;
+}
+
+.form-row input,
+.form-row select {
+    flex: 3;
+}
+
+.form-row label {
+    flex: 1;
+}
+
+fieldset {
+    margin-bottom: 20px;
+}

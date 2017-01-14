@@ -3,21 +3,57 @@
 <head>
     <meta charset="UTF-8">
     <title>Data Binding</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
-<div>
-<label for="first-name">First name</label>
-<input type="text" name="first-name" id="first-name">
-</div>
+<form>
+    <fieldset>
+        <legend>Name</legend>
+        <div class="form-row">
+            <label for="first-name">First name</label>
+            <input type="text" name="first-name" id="first-name" value="first">
+        </div>
 
-<div>
-<label for="second-name">Second name</label>
-<input type="text" name="first-name" id="second-name">
-</div>
+        <div class="form-row">
+            <label for="last-name">Last name</label>
+            <input type="text" name="first-name" id="last-name"  value="last">
+        </div>
 
-<p>Hello <span id="full-name"></span></p>
+        <p>Hello <span id="full-name"></span></p>
+    </fieldset>
+
+    <fieldset>
+        <legend>Birth Year</legend>
+        <div class="form-row">
+            <label for="select-birth-year">Year of birth:</label>
+            <select id="select-birth-year">
+                <option value="2000">2000</option>
+                <option value="2001">2001</option>
+                <option value="2002">2002</option>
+                <option value="2003">2003</option>
+                <option value="2004">2004</option>
+                <option value="2005">2005</option>
+                <option value="2006">2006</option>
+                <option value="2007">2007</option>
+                <option value="2008">2008</option>
+                <option value="2009">2009</option>
+                <option value="2010">2010</option>
+                <option value="2011">2011</option>
+                <option value="2012">2012</option>
+                <option value="2013">2013</option>
+                <option value="2014">2014</option>
+                <option value="2015">2015</option>
+                <option value="2016">2016</option>
+                <option value="2017">2017</option>
+            </select>
+        </div>
+
+        <p>Your age: <span id="birth-years-ago"></span></p>
+    </fieldset>
+</form>
 
 <script type="text/javascript" src="dist/scripts.js"></script>
+
 </body>
 </html>
