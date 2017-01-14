@@ -21,10 +21,7 @@ secondNameVal.subscribe((value) => {
     fullName.innerHTML = `${firstNameVal.value} ${value}`;
 });
 
-Rx.Observable.fromEvent(firstName, 'keyup')
-    .pluck('target', 'value')
-    .subscribe (firstNameChange, errorFn);
+const changeField = (field, fieldNameChangeFn) => Rx.Observable.fromEvent(field, 'keyup').pluck('target', 'value').subscribe (fieldNameChangeFn, errorFn);
 
-Rx.Observable.fromEvent(secondName, 'keyup')
-    .pluck('target', 'value')
-    .subscribe (secondNameChange, errorFn);
+changeField(firstName, firstNameChange);
+changeField(secondName, secondNameChange);
