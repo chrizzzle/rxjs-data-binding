@@ -16,7 +16,8 @@ body {
 }
 
 .form-row input,
-.form-row select {
+.form-row select,
+.form-row textarea {
     flex: 3;
 }
 
@@ -26,4 +27,12 @@ body {
 
 fieldset {
     margin-bottom: 20px;
+}
+
+.tag {
+    background-color: lightblue;
+    padding: 5px;
+    margin: 5px;
+    border-radius: 5px;
+    float: left;
 }
